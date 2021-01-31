@@ -30,7 +30,6 @@ public class DepositoTestFillParametrizado {
 		tank.fill(cantidad3);
 		assertEquals(capacidad,tank.getDepositoNivel(),0.05);
 		assertTrue(tank.estaLleno());
-		System.out.println(tank.getDepositoNivel());
 	}
 
 }
