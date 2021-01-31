@@ -59,7 +59,7 @@ public class DepositoCombustible {
     *          <code>false</code> en otro caso.
 	*/
     public boolean estaVacio(){
-      return depNivel == 0;
+    	return depNivel == 0;
     }
 
     /**
@@ -85,7 +85,11 @@ public class DepositoCombustible {
 	* 
 	*/
     public void fill(double amount){
-       depNivel = depNivel + amount;
+    	double prueba=depNivel;
+    	if(amount<0) amount=amount*(-1);
+    	prueba=prueba+amount;
+    	if(prueba<=depMax) depNivel = depNivel + amount;
+    	else depNivel=depMax;
     }
 
    /**
@@ -95,6 +99,10 @@ public class DepositoCombustible {
     * 
     */
 	public void consumir(double amount){
-       depNivel = depNivel - amount;
+		double prueba=depNivel;
+    	if(amount<0) amount=amount*(-1);
+    	prueba=prueba-amount;
+    	if(prueba<0) depNivel = 0;
+    	else depNivel=depNivel-amount;
     }
 }

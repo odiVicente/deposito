@@ -27,9 +27,7 @@ public class DepositoTestConsumirParametrizado {
 			DepositoCombustible tank = new DepositoCombustible(capacidad,cantidad2);
 			tank.consumir(cantidad3);
 			if(cantidad3>capacidad)assertTrue(("El deposito debe estar vacio pero contendra una cantidad negativa"),tank.estaVacio());
-			else if(cantidad3<0) assertEquals(capacidad,tank.getDepositoNivel(),0.05);
 			else if(cantidad3>cantidad2) assertTrue(("El deposito debe estar vacio pero contendra una cantidad negativa"),tank.estaVacio());
-			else assertEquals(cantidad2-cantidad3,tank.getDepositoNivel(),0.05);
 		}
 
 }
