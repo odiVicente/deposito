@@ -29,6 +29,8 @@ public class DepositoTestFillParametrizado {
 		DepositoCombustible tank = new DepositoCombustible(capacidad,cantidad2);
 		tank.fill(cantidad3);
 		assertEquals(capacidad,tank.getDepositoNivel(),0.05);
+		assertTrue(tank.estaLleno());
+		System.out.println(tank.getDepositoNivel());
 	}
 
 }
