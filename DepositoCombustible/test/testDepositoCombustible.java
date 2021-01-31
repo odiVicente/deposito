@@ -28,5 +28,12 @@ public class testDepositoCombustible {
 		
 		assertEquals(40.0,tank.getDepositoMax(),0.05);
 	}
+	@Test
+	public void testestaVacio() {
+		
+		tank.consumir(5.0);
+		assertTrue(tank.estaVacio());
+	}
+	
 	
 }
