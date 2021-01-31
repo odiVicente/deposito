@@ -23,5 +23,10 @@ public class testDepositoCombustible {
 		
 		assertEquals(5.0,tank.getDepositoNivel(),0.05);
 	}
+	@Test
+	public void testgetDepositoMax() {
+		
+		assertEquals(40.0,tank.getDepositoMax(),0.05);
+	}
 	
 }
