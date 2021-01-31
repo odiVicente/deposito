@@ -34,6 +34,12 @@ public class testDepositoCombustible {
 		tank.consumir(5.0);
 		assertTrue(tank.estaVacio());
 	}
+	@Test
+	public void testestaLleno() {
+		
+		tank.fill(35.0);
+		assertTrue(tank.estaLleno());
+	}
 	
 	
 }
